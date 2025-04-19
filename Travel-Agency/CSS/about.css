@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,900&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+nav{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  padding: 5px 30px;
+  border-bottom: 1px solid black;
+  z-index: 1;
+}
+
+nav .logo{
+  cursor: pointer;
+  transition: .5s;
+}
+
+nav .logo img{
+  width: 90px;
+}
+
+.links{
+  display: flex;
+  gap: 35px;
+}
+
+.links a{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  transition: .5s;
+}
+
+.links a:hover{
+  font-size: 21px;
+}
+
+.hamburger-menu{
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hamburger-menu span{
+  width: 50px;
+  height: 5px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.founder{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.founder img{
+  border-radius: 20px;
+  min-width: 300px;
+  box-shadow: 8px 10px 4px rgba(0, 0, 0, 0.2);
+  transition: 1s;
+}
+
+.founder img:hover{
+  transform: translateX(5px) translateY(5px);
+  box-shadow: 0px 0px rgba(0, 0, 0, 0.2);
+}
+
+.founder .founder-write-up{
+  max-width: 700px;
+}
+
+.mission{
+  background-color: black;
+  color: white;
+  padding: 30px 10px;
+}
+
+.mission h2{
+  position: relative;
+  transition: 0.5s;
+  cursor: pointer;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+.mission h2::after{
+  content: '';
+  position: absolute;
+  bottom: 3px;
+  left: 30px;
+  width: 80px;
+  height: 3px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.mission p{
+  padding-left: 10px;
+}
+
+.vision{
+  padding: 30px 10px;
+}
+
+.vision p{
+  padding-left: 10px;
+}
+
+.social-medias{
+  width: 300px;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.social-medias img{
+  padding: 10px;
+  width: 60px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: rgba(203, 200, 200, 0.5);
+  backdrop-filter: blur(10px);
+  transition: .5s;
+}
+
+.social-medias img:hover{
+  border: 3px solid white;
+  background-color: rgba(203, 200, 200, 0.7);
+}
+
+
+@media screen and (max-width: 680px) {
+  .founder{
+    flex-direction: column;
+  }
+
+  .founder img{
+    max-width: 200px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .links{
+    display: none;
+    transition: 1s;
+  }
+
+  .hamburger-menu{
+    display: flex;
+    cursor: pointer;
+  }
+
+  .links.active{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    /* padding: 15px; */
+    position: absolute;
+    top: 105px;
+    right: 0px;
+    gap: 0px;
+  }
+
+  .links.active a{
+    padding: 8px 90px 8px 8px;
+    border-bottom: 1px solid white;
+  }
+
+  .links.active a:hover{
+    background-color: white;
+    color: black;
+  }
+}
